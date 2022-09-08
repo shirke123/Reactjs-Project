@@ -30,13 +30,10 @@ function LoginFrom() {
 
     <div>
     <br /><br />
-    <div className = "container">
-         <div className = "row">
-             <div className = "card col-md-6 offset-md-3 offset-md-3">
-                {
-                   <h3 className = "text-center">Login In</h3>
-                }
-                 <div className = "card-body">
+    <div className="container">
+      <div className="row">
+        <div className="col-md-6 offset-md-3 border rounded p-4 mt-2 shadow">
+          <h2 className="text-center m-4">Login In</h2>
      {/* <form> */}
    
       <div className = "form-group mb-2">
@@ -62,7 +59,6 @@ function LoginFrom() {
          
      {/* </from> */}
           {/* <DisplayData data={userData}/>   */}
-         </div>
          </div>
          </div>
          </div>

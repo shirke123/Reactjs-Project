@@ -1,5 +1,4 @@
 import React, {useState, useEffect} from 'react'
-import { Link } from 'react-router-dom'
 // import Patient from '../projectone/Patient'
 
 const ListPatient = () => {
@@ -31,10 +30,11 @@ const ListPatient = () => {
     // }
 
     return (
-        <div className = "container">
-            <h2 className = "text-center"> List Patient </h2>
-            <button to = "/add-employee" className = "btn btn-primary mb-2" > Add Patient </button>
-            <table className="table table-bordered table-striped">
+        <div className="container">
+      <div className="py-4">
+      <button to = "/add-employee" className = "btn btn-primary mb-2" > Add Employee </button>
+        <table className="table border shadow">
+
             {/* <table className="navbar navbar-expand-md navbar-dark bg-dark"> */}
 
                 <thead>
@@ -68,6 +68,7 @@ const ListPatient = () => {
                     }
                 </tbody>
             </table>
+        </div>
         </div>
     )
 }

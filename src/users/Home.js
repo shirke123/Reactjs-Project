@@ -5,21 +5,21 @@ import { Link, useParams } from "react-router-dom";
 export default function Home() {
   const [users, setUsers] = useState([]);
 
-  // const { id } = useParams();
+  const { id } = useParams();
 
-  // useEffect(() => {
-  //   loadUsers();
-  // }, []);
+  useEffect(() => {
+    loadUsers();
+  }, []);
 
   const loadUsers = async () => {
-     await axios.get("localhost:8080/users");
-    // setUsers(result.data);
+    const result = await axios.get("http://localhost:8080/users");
+    setUsers(result.data);
   };
 
-//   const deleteUser = async (id) => {
-//     await axios.delete(`http://localhost:8080/user/${id}`);
-//     loadUsers();
-//   };
+  const deleteUser = async (id) => {
+    await axios.delete(`http://localhost:8080/user/${id}`);
+    loadUsers();
+  };
 
   return (
     <div className="container">
@@ -56,12 +56,12 @@ export default function Home() {
                   >
                     Edit
                   </Link>
-                  {/* <button
+                  <button
                     className="btn btn-danger mx-2"
                     onClick={() => deleteUser(user.id)}
                   >
                     Delete
-                  </button> */}
+                  </button>
                 </td>
               </tr>
             ))}

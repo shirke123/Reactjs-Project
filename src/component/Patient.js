@@ -22,11 +22,11 @@ export default function Patient() {
     setUser({ ...user, [e.target.name]: e.target.value });
   };
 
-  const onSubmit = async (e) => {
-    e.preventDefault();
-    await axios.get("http://llocalhost:8080/getAll");
-    // navigate("/");
-  };
+  // const onSubmit = async (e) => {
+  //   e.preventDefault();
+  //   await axios.get("http://llocalhost:8080/getAll");
+  //   // navigate("/");
+  // };
 
  
 
@@ -39,13 +39,7 @@ export default function Patient() {
       <div className="row">
         <div className="col-md-6 offset-md-3 border rounded p-4 mt-2 shadow">
           <h2 className="text-center m-4">Register User</h2>
-           {/* <div className = "container">
-                <div className = "row">
-                    <div className = "card col-md-6 offset-md-3 offset-md-3">
-                       {
-                          <h3 className = "text-center">Patient Registration From</h3>
-                       }
-                        <div className = "card-body"> */}
+           
     <form onSubmit={(e) => onSubmit(e)}>
 
 
